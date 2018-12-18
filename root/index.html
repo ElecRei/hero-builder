@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blank Page</title>
+        <meta name="description" content="__">
+        
+        <!-- CSS -->
+        
+            <!-- Local Styling -->
+        
+                <style>
+                    
+                    /* IMPORTS
+                    ============= */
+                    
+                    
+                    /* ========== */
+                    
+                    
+                    /* HTML TAGS 
+                    ============= */
+                    
+                        * {
+                            margin: 0px;
+                            padding: 0px;
+                        }
+                    
+                            *, *:before, *:after {
+                                box-sizing: border-box;
+                            }
+
+                        html, body {
+                            width: 100%;
+                        }
+                    
+                        body {
+                            background: #DEDEDE;
+                        }
+                    
+                    
+                    /* ========== */
+                    
+                    
+                    /* PAGE STYLING 
+                    ============= */
+                    
+                        #site_wrapper {
+                            width: 1080px;
+                            height: auto;
+                        }
+                    
+                            /* Health Bar Version 1.0
+                            ======== */
+                    
+                            div.health_bar {
+                                background: #FFF;
+                                border: 1px solid #000;
+                                    border-radius: 8px;
+
+                                width: 255px;
+                                height: 42px;
+                                margin-left: 8px;
+                                padding-left: 6px;
+
+                                transform: skewX(-25deg);
+                            }
+
+                            div.health_point {
+                                background: orange;
+                                    background-clip: content-box;
+
+                                width: 25%;
+                                height: 42px;
+                                padding: 4px 0px 6px 0px;
+                                float: left;
+
+                                -webkit-backface-visibility: hidden;
+                            }
+
+                                div.health_point:first-child {
+                                    /*padding-left: 6px;*/
+                                }
+                    
+                            /* ======== */
+                    
+                    
+                            /* Health Bar Version 2.0
+                            ======== */
+
+                            div.health_bar2 {
+                                background: #FFF;
+                                border: 1px solid #000;
+                                    border-radius: 8px;
+
+                                width: 255px;
+                                height: 42px;
+                                margin-left: 8px;
+                                padding-left: 6px;
+                                padding-right: 6px;
+
+                                transform: skewX(-25deg);
+                            }
+
+                            div.health_point2 {
+                                background: skyblue;
+                                    background-clip: content-box;
+
+                                width: 25%;
+                                height: 42px;
+                                padding: 4px 0px 6px 0px;
+                                float: left;
+
+                                -webkit-backface-visibility: hidden;
+                            }
+                    
+                            /* ======== */
+                    
+                    /* ========== */
+                    
+
+                </style>
+        
+        
+        <!-- JS + jQuery -->
+        
+            <!-- jQuery 3.3.1 Min CDN -->
+        
+                <script
+                    src="http://code.jquery.com/jquery-3.3.1.min.js"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous">
+                </script>
+            
+    </head>
+    
+    
+    <body>
+        
+        <div id="site_wrapper">
+        
+            <h3>Health Bar v.1</h3>
+            
+                <div class="health_bar">
+                    <div class="health_point"></div>
+                    <div class="health_point"></div>
+                    <div class="health_point"></div>
+                    <div class="health_point"></div>
+                </div>
+            
+            <br><br>
+            
+            <h3>Health Bar v.2</h3>
+            
+                <div class="health_bar2">
+                    <div class="health_point2"></div>
+                    <div class="health_point2"></div>
+                    <div class="health_point2"></div>
+                    <div class="health_point2"></div>
+                </div>
+        
+        </div>
+        
+    </body>
+    
+</html>

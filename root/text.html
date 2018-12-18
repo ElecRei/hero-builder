@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>OW Health Bar</title>
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        
+            <!-- Local Styling -->
+        
+                <style>
+                    
+                    /* IMPORTS
+                    ============= */
+                    
+                    
+                    /* ========== */
+                    
+                    
+                    /* HTML TAGS 
+                    ============= */
+                    
+                        * {
+                            margin: 0px;
+                            padding: 0px;
+                        }
+                    
+                            *, *:before, *:after {
+                                box-sizing: border-box;
+                            }
+
+                        html, body {
+                            width: 100%;
+                        }
+                    
+                        body {
+                            background: #DEDEDE;
+                        }
+                    
+                    
+                    /* ========== */
+                    
+                    
+                    /* PAGE STYLING 
+                    ============= */
+                    
+                        #site_wrapper {
+                            width: 1080px;
+                            height: auto;
+                        }
+                    
+                    div.health_bar {
+                        background: #FFF;
+                        border: 1px solid #000;
+                            border-radius: 8px;
+                        
+                        width: 255px;
+                        height: 42px;
+                        margin-left: 8px;
+                        padding-left: 6px;
+                        
+                        transform: skewX(-25deg);
+                    }
+                    
+                    div.health_point {
+                        backgroundS: white;
+                            background-clip: content-box;
+                        
+                        width: 25%;
+                        height: 42px;
+                        padding: 4px 0px 6px 0px;
+                        float: left;
+                        
+                        -webkit-backface-visibility: hidden;
+                    }
+                    
+                        div.health_point:first-child {
+                            /*padding-left: 6px;*/
+                        }
+                    
+                    div.HP200  div.health_point {
+                        background: orange;
+                            background-clip: content-box;
+                        
+                        width: 12.5%;
+                    }
+                    
+                    div.HP250  div.health_point {
+                        background: red;
+                            background-clip: content-box;
+                        
+                        width: 10%;
+                    }
+                    
+                    div.HP400  div.health_point {
+                        background: skyblue;
+                            background-clip: content-box;
+                        
+                        width: 6.25%;
+                    }
+                    
+                    div.HP500  div.health_point {
+                        background: lightpink;
+                            background-clip: content-box;
+                        
+                        width: 5%;
+                    }
+                    
+                    div.HP600  div.health_point {
+                        background: darkgray;
+                            background-clip: content-box;
+                        
+                        width: 4.16666%;
+                    }
+                    
+                    /* ========== */
+                    
+
+                </style>
+        
+        
+        <!-- JS + jQuery -->
+        
+            <!-- jQuery 3.2.1 Min CDN -->
+        
+                <script
+                    src="https://code.jquery.com/jquery-3.2.1.min.js"
+                    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                    crossorigin="anonymous">
+                </script>
+        
+    </head>
+    
+    
+    <body>
+        
+        <div id="site_wrapper">
+            
+            <div class="health_bar">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+            
+            <div class="health_bar HP200">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+            
+            <div class="health_bar HP250">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+            
+            <div class="health_bar HP400">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+            
+            <div class="health_bar HP500">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+            
+            <div class="health_bar HP600">
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+                <div class="health_point"></div>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

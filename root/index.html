@@ -88,7 +88,9 @@
                     
                             /* Health Bar Version 2.0
                             ======== */
-
+                            
+                            /*        
+                    
                             div.health_bar2 {
                                 background: #FFF;
                                 border: 1px solid #000;
@@ -102,7 +104,7 @@
 
                                 transform: skewX(-25deg);
                             }
-
+                    
                             div.health_point2 {
                                 background: skyblue;
                                     background-clip: content-box;
@@ -114,6 +116,100 @@
 
                                 -webkit-backface-visibility: hidden;
                             }
+                            */
+                    
+                            div.health_bar2 {
+                                background: #FFF;
+                                border: 1px solid #000;
+                                    border-radius: 8px;
+
+                                width: 255px;
+                                height: 42px;
+                                margin-left: 8px;
+                                padding-left: 6px;
+                                padding-right: 6px;
+
+                                transform: skewX(-18deg);
+                            }
+                    
+                            div.health_point2 {
+                                background: skyblue;
+                                    background-clip: content-box;
+
+                                width: 24px;
+                                height: 24px;
+                                float: left;
+
+                                -webkit-backface-visibility: hidden;
+                            }
+                    
+                            div.health_bar3 {
+                                background: #FFF;
+                                border: 1px solid #000;
+                                    border-radius: 8px;
+
+                                display: inline-block;
+                                margin-left: 8px;
+                                padding: 4px 6px;
+                                padding: 4px 4px 4px 6px;
+
+                                transform: skewX(-18deg);
+                            }
+                    
+                            div.health_point3{
+                                background: skyblue;
+                                    background-clip: content-box;
+
+                                width: 36px;
+                                height: 36px;
+                                margin-right: 2px;
+                                float: left;
+
+                                -webkit-backface-visibility: hidden;
+                            }
+                    
+                                div.health_bar3.s600 > div.health_point3 {
+                                    background: darkgray;
+                                    
+                                    width: 12px;
+                                }
+                    
+                            div.health_barOut {
+                                background: #FFF;
+                                border: 1px solid #000;
+                                    border-radius: 8px;
+
+                                display: inline-block;
+                                width: 288px;
+                                margin-left: 8px;
+                                padding: 4px 6px;
+                                padding: 4px 4px 4px 6px;
+
+                                transform: skewX(-18deg);
+                            }
+                    
+                                div.health_pointOut{
+                                    background: skyblue;
+                                        background-clip: content-box;
+                                    box-sizing: border-box;
+                                    border-right: .2px solid #FFF;
+
+                                    width: 36px;
+                                    height: 36px;
+                                    float: left;
+
+                                    -webkit-backface-visibility: hidden;
+                                }
+                    
+                                .reg { background: #b7bbc6; }
+                    
+                                .armor { background: #b0681e; }
+                    
+                                .shield { background: #42afd6; }
+                    
+                            .value-sliders { display: none; }
+                    
+                            .range-regular, .range-armor, .range-shield {}
                     
                             /* ======== */
                     
@@ -159,8 +255,211 @@
                     <div class="health_point2"></div>
                     <div class="health_point2"></div>
                 </div>
+            
+            <h3>Health Bar v.3</h3>
+            
+                <div class="health_bar3">
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                </div>
+            
+                <br><br>
+            
+                <div class="health_bar3">
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                </div>
+            
+                <br><br>
+            
+                <div class="health_bar3 s600">
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                    <div class="health_point3"></div>
+                </div>
+            
+                <br><br>
+            
+                <!--<input type="text" id="input-num" placeholder="Enter number" />-->
+            
+                <select class="select-num">
+            
+            
+                </select>
+            
+                <div class="value-sliders">
+                    
+                    <div id="healthPointTotal"></div>
+                    
+                    <label>Regular Amount:</label>
+            
+                    <input class="range Reg" type="range" max="" min="0" step="25" oninput="rangeSelector(this.value, 'Reg')">
+                    <span id="numReg">0</span>
+                    
+                    <br><br>
+                    
+                    <label>Armor Amount:</label>
+            
+                    <input class="range Armor" type="range" max="" min="0" step="25" oninput="rangeSelector(this.value, 'Armor')">
+                    <span id="numArmor">0</span>
+                    
+                    <br><br>
+                    
+                    <label>Shield Amount:</label>
+
+                    <input class="range Shield" type="range" max="" min="0" step="25" oninput="rangeSelector(this.value, 'Shield')">
+                    <span id="numShield">0</span>
+                    
+                </div>
+                
+                <br><br>
+                
+                <button type="submit" onclick="calcHealth();">Submit</button>
+            
+                <br><br>
+                
+                <hr style="width:25%;" />
+            
+                <br><br>
+            
+                    <div class="health_barOut">
+                        
+                    </div>
         
         </div>
+        
+        <script type="text/javascript">
+            
+            // Var List
+            
+            var healthVal;// = $('.select-num').val(); // This gets the value from the selected option
+            
+            var valReg;
+            
+            var valArmor;
+            
+            var valShield;
+            
+            function genValues () {
+                
+                var healthValues = [];
+                
+                var healthCounter = 0;
+                
+                for(var i = 0; i < 80; i++) {
+                    
+                    healthCounter += 25;
+                    
+                    console.log(healthCounter);
+                    
+                    $('.select-num').append('<option class="opt' + healthCounter + '">' + healthCounter + '</option>');
+                    
+                }
+                
+                
+            }
+            
+            $('.select-num').change(function(){
+                
+                healthVal = $('.select-num').val();
+
+                $('.value-sliders').css('display', 'block');
+                
+                $('#health').css('display', 'block');
+
+                //  $("input[type='number']").prop('min',1);
+
+                //$('.range[type="range"]').prop('max', healthVal);
+                
+                console.log(healthVal);
+
+                $('.range').attr('max', healthVal);
+                $('.range').val(0);
+                //$('.range[type="range"]').val('0');
+
+            });
+            /*
+            function rangeSelector(selectRangeValue) {
+                
+                    $('#numReg').text(selectRangeValue);
+                
+            }
+            */
+            
+            function rangeSelector(selectRangeValue, selectRangeType) {
+
+                    $('#num' + selectRangeType).text(selectRangeValue);
+                
+            }
+        
+            function calcHealth() {
+                
+                //var healthPercent = (healthVal / 288) * 100; // This converts it to a percent for width
+                
+                var healthPoints = healthVal / 25; // This determines how many health points need to be generated
+                
+                console.log(healthPoints);
+                
+                //var healthTotal = 288 / healthPoints;
+                
+                var healthTotal = (100 / healthPoints);
+                
+                console.log(healthVal);
+                
+                console.log(healthTotal);
+                
+                // I want the value of the percent 
+                
+                
+                if($('.health_barOut').children().length > 0) {
+                    $('.health_barOut').empty();
+                }
+                
+                //$('.health_pointOut').css("width", healthPercent + "%");
+                
+                for(var i = 0; i < healthPoints; i++) {
+                    
+                    $('.health_barOut').append('<div class="health_pointOut"></div>');
+                    
+                }
+                
+                $('.health_pointOut').css("width", healthTotal + "%");
+                
+                
+            }
+            
+            genValues();
+            
+        </script>
         
     </body>
     
